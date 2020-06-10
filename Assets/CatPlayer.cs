@@ -28,5 +28,21 @@ public class CatPlayer : MonoBehaviour
                 transform.position.y,
                 transform.position.z - 3f * Time.deltaTime);
         }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            Debug.Log("옆으로 가라");
+            transform.position = new Vector3(
+                transform.position.x - 3f * Time.deltaTime,
+                transform.position.y,
+                transform.position.z);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            Debug.Log("오른쪽으로 가라");
+            transform.position = new Vector3(
+                transform.position.x + 3f * Time.deltaTime,
+                transform.position.y,
+                transform.position.z);
+        }
     }
 }
